@@ -3,12 +3,34 @@ project(WaffleApp)
 
 # Specify source files.
 set(SOURCES
-    src/main.cpp
-    src/game.cpp
+    main.cpp
 )
 
 # Define the executable target.
 add_executable(WaffleApp ${SOURCES})
 
-# Link with WaffleEngine and possibly other dependencies.
 target_link_libraries(WaffleApp PRIVATE WaffleEngine)
+
+target_include_directories(WaffleApp
+    PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}
+        ${CMAKE_CURRENT_SOURCE_DIR}/../WaffleEngine
+)
+
+project(test)
+
+# Specify source files.
+set(SOURCES
+    test.cpp
+)
+
+# Define the executable target.
+add_executable(test ${SOURCES})
+
+target_link_libraries(test PRIVATE WaffleEngine)
+
+target_include_directories(test
+    PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}
+        ${CMAKE_CURRENT_SOURCE_DIR}/../WaffleEngine
+)
