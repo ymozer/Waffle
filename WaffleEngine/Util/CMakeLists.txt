@@ -4,4 +4,6 @@ set (WAFFLE_UTIL_SOURCES
 )
 
 add_library(waffle_util STATIC ${WAFFLE_UTIL_SOURCES})
-target_include_directories(waffle_util PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(waffle_util PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../vendor/glad/include
+)

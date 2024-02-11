@@ -1,8 +1,9 @@
 add_subdirectory(Util)
+add_subdirectory(Renderer)
 add_subdirectory(Core)
-#add_subdirectory(Input)
+add_subdirectory(Input)
 #add_subdirectory(Audio)
-#add_subdirectory(Renderer)
+add_subdirectory(UI)
 #add_subdirectory(Scene)
 #add_subdirectory(Thread)
 
@@ -17,11 +18,15 @@ add_library(WaffleEngine STATIC
 # Link with external dependencies from `vendor`.
 # Here we link with GLFW. GLAD is header-only, so it doesn't need to be linked.
 target_link_libraries(WaffleEngine PUBLIC 
-    imgui 
+    imgui
     imgui_impl_glfw
     imgui_impl_opengl3 
     glfw
     waffle_core
+    waffle_ui
+    waffle_util
+    waffle_input
+    waffle_renderer
 )
 
 target_include_directories(WaffleEngine PUBLIC

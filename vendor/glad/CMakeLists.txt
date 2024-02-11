@@ -1,6 +1,11 @@
+set(WAFFLE_GLAD_SOURCES
+    gl.c
 
-# Add the glad library as an interface target
-add_library(glad INTERFACE)
+    include/glad/gl.h
+)
 
-# Set the include directory for glad
-target_include_directories(glad INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+#add_library(glad STATIC  ${WAFFLE_GLAD_SOURCES})
+
+include_directories(glad
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
+)

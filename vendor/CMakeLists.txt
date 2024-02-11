@@ -1,8 +1,11 @@
 # GLAD
-include_directories(glad/include)
+add_subdirectory(glad)
 
 # GLM
 include_directories(glm)
+
+# STB
+include_directories(stb)
 
 # GLFW
 add_subdirectory(glfw)
