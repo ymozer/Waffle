@@ -1,4 +1,6 @@
 # Waffle Engine
+Hobby project of mine to improve my C++ and Computer Graphics skills. 
+
 
 ## git submodule add:
 https://github.com/ymozer/glm.git
